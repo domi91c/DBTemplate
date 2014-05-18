@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'therubyracer'
+
+gem 'flatui-rails'
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
 gem 'devise'
