@@ -2,18 +2,26 @@ class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 
+
+	def show_user
+		@user = current_user
+				render 'show'
+  end
+
 	def index
 		@user = User.all
 	end
 
 	def new
 		@user = User.new
+		render 'profiles'
 
 	end
 	def create
 		@user = User.new(user_params)
 		if @user.save
 			redirect_to posts_path, notice: 'User successfully added.'
+
 		else
 			render 'profiles'
 

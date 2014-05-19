@@ -68,6 +68,7 @@
           <ul class="nav">
 
             <% if !user_signed_in? %>
+
                 <li><%= link_to "Sign Up", new_user_registration_path  %></li>
                 <li><%= link_to "Login", new_user_session_path  %></li>
             <% else %>
@@ -87,6 +88,8 @@
       <div class="well sidebar-nav">
         <ul class="nav nav-list">
           <li class="nav-header">Sidebar</li>
+          <li><%= link_to "Profile", 'profiles'  %></li>
+
           <li><%= link_to "Offers", "/path1"  %></li>
           <li><%= link_to "Requests", "/path2"  %></li>
           <li><%= link_to "Post Ad", "/path3"  %></li>

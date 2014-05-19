@@ -69,6 +69,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:bio)
+      params.require(:profile).permit(:name, :email, :bio).merge(user_id: current_user.id)
     end
 end
