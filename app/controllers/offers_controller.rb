@@ -1,11 +1,21 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
+
+
+
+
+
   # GET /offers
   # GET /offers.json
   def index
     @offers = Offer.all
 
+    if params[:search]
+	    @offers = Offer.search(params[:search]).order("created_at DESC")
+    else
+	    @offers = Offer.all.order('created_at DESC')
+    end
   end
 
   # GET /offers/1
