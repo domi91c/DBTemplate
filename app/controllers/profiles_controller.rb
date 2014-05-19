@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profile = Profile.all
+    @post = Post.all
   end
 
   # GET /profiles/1
