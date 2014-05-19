@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :requests
+
+  resources :offers
+
   resources :profiles
 
 	resources :posts
