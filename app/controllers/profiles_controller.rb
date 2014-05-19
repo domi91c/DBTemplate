@@ -4,8 +4,10 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @post = Post.all
-  end
+	  @post = Post.all
+
+
+	end
 
   # GET /profiles/1
   # GET /profiles/1.json

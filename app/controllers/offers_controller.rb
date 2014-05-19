@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   # GET /offers.json
   def index
     @offers = Offer.all
+
   end
 
   # GET /offers/1
@@ -54,6 +55,7 @@ class OffersController < ApplicationController
   # DELETE /offers/1
   # DELETE /offers/1.json
   def destroy
+
     @offer.destroy
     respond_to do |format|
       format.html { redirect_to offers_url, notice: 'Offer was successfully destroyed.' }
