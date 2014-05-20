@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
-		render 'profiles'
+		render profiles_path
 
 	end
 	def create
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 			redirect_to posts_path, notice: 'User successfully added.'
 
 		else
-			render 'profiles'
+			render profiles_path
 
 		end
 	end
