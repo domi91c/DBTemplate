@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
 	       :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :posts
+	has_one :offer
+
+	has_one :request
+
 	has_one :profile
 
 	def name

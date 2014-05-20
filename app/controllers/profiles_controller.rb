@@ -1,10 +1,13 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, :only => [:index, :new]
+
+
 
   # GET /profiles
   # GET /profiles.json
   def index
-	  @post = Post.all
+	 @post = Post.where(:user_id => current_user.id)
 
 
 	end
@@ -71,6 +74,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :email, :bio).merge(user_id: current_user.id)
+      params.require(:profile).permit(:name, :email, :bio, :image_url).merge(user_id: current_user.id)
     end
 end

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+gem 'paperclip', '~> 3.1'
+
 gem 'jazz_hands'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'

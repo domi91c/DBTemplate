@@ -1,5 +1,5 @@
 class Offer < ActiveRecord::Base
-
+	belongs_to :user
 
 
 	def self.search(query)
