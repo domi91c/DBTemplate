@@ -5,6 +5,12 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
     @requests = Request.all
+
+    if params[:search]
+	    @requests = Request.search(params[:search]).order("created_at DESC")
+    else
+	    @requests = Request.all.order('created_at DESC')
+    end
   end
 
   # GET /requests/1
