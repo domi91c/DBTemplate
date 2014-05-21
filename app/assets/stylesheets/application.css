@@ -15,4 +15,8 @@
  */
 @import "flat-ui";
 
+.logo {
+
+    content:url(logo.png);
+}
 

@@ -40,8 +40,9 @@
 
 <div id="firstbar">
 </div>
-<footer class="">
-  <p>&copy; Company 2014</p>
+
+<footer>
+  <p> .</p>
 </footer>
 <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
@@ -65,7 +66,10 @@
         <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
             <%end%>
-        <a class="brand" href="#">Favour It</a>
+        <div class="logo">
+        </div>
+
+        <!--<a class="brand" href="#">Favour It</a>-->
 
         <div class="container-fluid nav-collapse">
 
