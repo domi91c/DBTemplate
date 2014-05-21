@@ -199,8 +199,7 @@ you can use the generic selector below, but it's slower:
   border-top-color: #34495e !important;
 }
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: acme, sans-serif;  font-size: 18px;
   line-height: 1.72222;
   color: #34495e;
   background-color: #ffffff;
@@ -4446,7 +4445,7 @@ body.vjs-full-window {
   }
 }
 footer {
-  background-color: #edeff1;
+  background-color: #4D77A2;
   color: #bac1c8;
   font-size: 15px;
   padding: 0;
